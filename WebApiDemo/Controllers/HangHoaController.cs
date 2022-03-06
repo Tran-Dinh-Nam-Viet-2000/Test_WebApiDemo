@@ -14,12 +14,21 @@ namespace WebApiDemo.Controllers
     {
         public static List<MaHangHoa> hangHoas = new List<MaHangHoa>();
 
+        /// <summary>
+        /// Get tất cả hàng hóa
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IActionResult GetAll()
         {
             return Ok(hangHoas);
         }
 
+        /// <summary>
+        /// Tìm 1 hàng hóa bằng id
+        /// </summary>
+        /// <param name="getById"></param>
+        /// <returns></returns>
         [HttpGet("{getById}")]
         public IActionResult GetById(string getById)
         {
@@ -38,6 +47,11 @@ namespace WebApiDemo.Controllers
             }
         }
 
+        /// <summary>
+        /// Thêm mới hàng hóa
+        /// </summary>
+        /// <param name="hangHoa">tạo mới 1 object</param>
+        /// <returns></returns>
         [HttpPost]
         public IActionResult Create_HangHoa(HangHoa hangHoa)
         {
@@ -88,6 +102,11 @@ namespace WebApiDemo.Controllers
             }
         }
 
+        /// <summary>
+        /// Xóa 1 hàng hóa bằng id 
+        /// </summary>
+        /// <param name="deleteById"></param>
+        /// <returns></returns>
         [HttpDelete("{deleteById}")]
         public IActionResult Delete_HangHoa(string deleteById)
         {
