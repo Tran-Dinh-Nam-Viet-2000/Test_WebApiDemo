@@ -53,7 +53,7 @@ namespace WebApiDemo.Controllers
         /// <param name="hangHoa">tạo mới 1 object</param>
         /// <returns></returns>
         [HttpPost]
-        public IActionResult Create_HangHoa(HangHoa hangHoa)
+        public IActionResult Create_HangHoa(HangHoaTest hangHoa)
         {
             var createData = new MaHangHoa
             {
@@ -81,7 +81,7 @@ namespace WebApiDemo.Controllers
         /// <param name="hangHoa">chỉ trả json của hanghoa còn Id thì ko cần update mà chỉ nhập</param>
         /// <returns></returns>
         [HttpPut("{updateById}")]
-        public IActionResult Update_HangHoa(string updateById, HangHoa hangHoa)
+        public IActionResult Update_HangHoa(string updateById, HangHoaTest hangHoa)
         {
             try
             {
