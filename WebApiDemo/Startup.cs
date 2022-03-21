@@ -13,6 +13,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebApiDemo.Database;
+using WebApiDemo.Services;
+using WebApiDemo.Services.Interface;
 
 namespace WebApiDemo
 {
@@ -35,6 +37,10 @@ namespace WebApiDemo
             });
             services.AddControllers().AddNewtonsoftJson();
             services.AddControllers();
+
+            services.AddScoped<ILoaiRepository, LoaiRepository>();
+            services.AddScoped<IHangHoaRepository, HangHoaRepository>();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebApiDemo", Version = "v1" });
