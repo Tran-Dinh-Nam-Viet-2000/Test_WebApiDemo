@@ -40,6 +40,7 @@ namespace WebApiDemo
 
             services.AddScoped<ILoaiRepository, LoaiRepository>();
             services.AddScoped<IHangHoaRepository, HangHoaRepository>();
+            services.AddScoped<IHangHoa_Sort_Filter_Paging, HangHoa_Sort_Filter_Paging>();
 
             services.AddSwaggerGen(c =>
             {
